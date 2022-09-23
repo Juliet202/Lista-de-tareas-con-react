@@ -1,13 +1,13 @@
-import React from 'react';
-import { Button, ListGroup } from 'react-bootstrap';
+import React from "react";
+import { Button, ListGroup } from "react-bootstrap";
 
-
-const Item = () => {
-    return (
-        
-    <ListGroup.Item className='d-flex justify-content-between'>Tarea 1 <Button variant='secondary'>Borrar</Button></ListGroup.Item>
-
-    );
+const Item = ({nombreTarea, borrarTarea}) => {
+  return (
+    <ListGroup.Item className="d-flex justify-content-between">
+      {nombreTarea}
+      <Button variant="secondary" onClick={()=> {borrarTarea(nombreTarea)}}>Borrar</Button>
+    </ListGroup.Item>
+  );
 };
 
 export default Item;
